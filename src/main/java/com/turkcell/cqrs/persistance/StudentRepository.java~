@@ -1,0 +1,4 @@
+package com.turkcell.cqrs.persistance;
+
+public interface StudentRepository {
+}
