@@ -1,0 +1,4 @@
+package com.turkcell.cqrs.application.book.query.getlist;
+
+public class GetListBookItemDto {
+}
