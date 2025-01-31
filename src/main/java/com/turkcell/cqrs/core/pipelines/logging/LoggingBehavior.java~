@@ -1,4 +1,0 @@
-package com.turkcell.cqrs.core.pipelines.logging;
-
-public class LoggingBehavior {
-}
