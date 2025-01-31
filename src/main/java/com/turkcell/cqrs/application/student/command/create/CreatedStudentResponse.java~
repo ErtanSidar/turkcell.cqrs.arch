@@ -1,0 +1,4 @@
+package com.turkcell.cqrs.application.student.command.create;
+
+public class CreatedStudentResponse {
+}
