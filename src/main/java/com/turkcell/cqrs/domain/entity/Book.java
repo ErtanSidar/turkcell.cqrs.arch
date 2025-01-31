@@ -1,8 +1,6 @@
 package com.turkcell.cqrs.domain.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,5 +18,10 @@ public class Book {
     @Id
     @UuidGenerator
     private UUID id;
+
     private String name;
+
+    @ManyToOne
+    @JoinColumn(name = "author_id")
+    private Author author;
 }
