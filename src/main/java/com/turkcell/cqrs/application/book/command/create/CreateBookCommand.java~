@@ -24,7 +24,7 @@ public class CreateBookCommand implements Command<CreatedBookResponse>, Authenti
             BookMapper mapper = BookMapper.INSTANCE;
             Book book = mapper.convertCreateCommandToBook(createBookCommand);
             bookRepository.save(book);
-
+            
             return mapper.convertBookToCreateBookResponse(book);
         }
     }
