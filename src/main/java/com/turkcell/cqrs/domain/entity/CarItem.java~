@@ -1,0 +1,13 @@
+package com.turkcell.cqrs.domain.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "car_items")
+public class CarItem {
+
+    @Id
+    
+}
