@@ -1,4 +1,0 @@
-package com.turkcell.cqrs.core.web;
-
-public class BaseController {
-}
