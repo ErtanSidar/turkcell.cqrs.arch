@@ -1,0 +1,4 @@
+package com.turkcell.cqrs.core.exception.type;
+
+public class ValidationException extends RuntimeException {
+}

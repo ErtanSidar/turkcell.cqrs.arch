@@ -1,0 +1,4 @@
+package com.turkcell.cqrs.controllers;
+
+public class AuthController {
+}

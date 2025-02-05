@@ -51,16 +51,6 @@ public class JwtService {
         return claims.getExpiration().after(new Date());
     }
 
-    public String extractId(String token){
-        Claims claims = Jwts
-                .parser()
-                .verifyWith((SecretKey) getSignKey())
-                .build()
-                .parseSignedClaims(token)
-                .getPayload();
-        return claims.get("id", String.class);
-    }
-
     public String extractUsername(String token) {
         Claims claims = Jwts
                 .parser()

@@ -1,0 +1,4 @@
+package com.turkcell.cqrs.core.pipelines.validation;
+
+public class ValidationBehavior {
+}

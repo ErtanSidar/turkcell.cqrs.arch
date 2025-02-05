@@ -10,7 +10,6 @@ import com.turkcell.cqrs.domain.entity.Student;
 import com.turkcell.cqrs.persistance.cartItem.CartItemRepository;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;
@@ -33,8 +32,7 @@ public class CreateCartItemCommand implements Command<CreatedCartItemResponse>
 
         @Override
         public CreatedCartItemResponse handle(CreateCartItemCommand createCartItemCommand) {
-            String studentId = SecurityContextHolder.getContext().getAuthentication().getCredentials().toString();
-            Student student = studentService.findStudentById(UUID.fromString(studentId));
+            Student student = studentService.findStudentById(createCartItemCommand.getStudentId());
             Cart cart = cartService.getOrCreateCartForStudent(student);
 
             CartItem cartItem = cart.getCartItems()
