@@ -1,4 +1,0 @@
-package com.turkcell.cqrs.domain.entity;
-
-public class Basket {
-}
